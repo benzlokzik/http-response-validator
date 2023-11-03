@@ -45,8 +45,8 @@ async fn run() -> Result<(), Box<dyn Error>> {
                     println!("Checking '{}'. Result: ERR({})", url, resp.status().as_u16());
                 }
             }
-            Err(e) => {
-                println!("Error occurred while making the HTTP request: {}", e);
+            Err(_) => {
+                println!("URL parsing error");
                 break;
             }
         }
